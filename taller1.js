@@ -1,3 +1,50 @@
+// Punto 1
+function convertidorTemp(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+console.log(convertidorTemp(0));   
+console.log(convertidorTemp(100)); 
+console.log(convertidorTemp(25)); 
+
+
+// Punto 2
+function resolvedor(a, b, c, positivo = true) {
+    let discriminante = b**2 - 4 * a * c;
+
+    let raiz = Math.sqrt(discriminante);
+    let resultado;
+
+    if (positivo) {
+        resultado = (-b + raiz) / (2 * a);
+    } else {
+        resultado = (-b - raiz) / (2 * a);
+    }
+
+    return resultado;
+}
+
+console.log("Raíz positiva:", resolvedor(1, 5, 4, true));
+console.log("Raíz negativa:", resolvedor(1, 5, 4, false));
+
+
+// Punto 3
+function mejorParidad(numero) {
+    return numero % 2 === 0; 
+}
+
+let numero = 10;
+
+console.log(mejorParidad(10))
+
+if (mejorParidad(10)) {
+    console.log(`El número ${numero} es par`);
+} else {
+    console.log(`El número ${numero} es impar`);
+}
+
+
+// Punto 4
 function peorParidad(numero) {
     switch (numero) {
         case 1:
